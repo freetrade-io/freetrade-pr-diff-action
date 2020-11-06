@@ -1,0 +1,1 @@
+# freetrade-pr-diff-action
