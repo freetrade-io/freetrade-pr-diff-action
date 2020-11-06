@@ -1,0 +1,14 @@
+name: 'PR checks'
+on: [pull_request]
+
+jobs:
+  check_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: forbidden words check
+        uses: freetrade-io/freetrade-pr-diff-action@releases/v1
+        with:
+          github-token: ${{github.token}}
+          words: |
+            Cache-Control
+            cache-control
